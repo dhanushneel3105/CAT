@@ -1,0 +1,14 @@
+
+
+delete from table where eventtimeutc < 
+
+
+(Syste.Currenttimems * 1000  - (24 * numberdays * 60* 10000))
+
+
+
+
+delete from table
+output (inserted.*) into table_hist
+ where eventtimeutc < 
+(Syste.Currenttimems * 1000  - (24 * numberdays * 60* 10000))

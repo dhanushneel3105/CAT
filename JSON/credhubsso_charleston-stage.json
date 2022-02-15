@@ -1,0 +1,53 @@
+{
+   "lbsdbconfig": {
+      "username": "uc9367bfcece547978b9d705fb15fe075",
+      "uri": "jdbc:sqlserver://SQL-D-16T1067.NOS.BOEING.COM:1433;databaseName=I2LCharlestonDevices",
+      "password": "P54a69bb2acd146d2af5e7a3b21ea0e87"
+   },
+   "tagdbconfig": {
+      "username": "uc9120047020444c2a5a6e6522d90ef8d",
+      "uri": "jdbc:sqlserver://SQL-D-16T1067.NOS.BOEING.COM:1433;databaseName=I2LCharlestonAssets",
+      "password": "Pdd044eeaa2494023af948ec2ce3b1f02"
+   },
+   "eventdbconfig": {
+      "username": "u97efaf4075e14864bd38ebc3df78beae",
+      "uri": "jdbc:sqlserver://SQL-D-16T1067.NOS.BOEING.COM:1433;databaseName=I2LCharlestonEvents",
+      "password": "P71c96f8945664578a0f4bf8c7fae9e78"
+   },
+   "rabbitmqconfig": {
+      "hostName": "10.59.201.218",
+      "password": "6v7XvotuSyfGARjSwx1rLfjJ",
+      "userName": "f9a9ab80-0be4-479e-9972-0efa55eefda5",
+      "vHost": "fb954fb6-771d-45ca-9ca6-9477b9f1e817",
+      "port": "5672"
+   },
+   "ssotokenconfig": {
+      "id": "74fd275e-fb18-4df9-9eca-64fb502fca01",
+      "url": "https://apps-bemsid-only.login.system.pcfpre-ewd.cloud.boeing.com/oauth/token",
+      "secret": "c2f53d93-55ae-420c-8efe-2def4881661d"
+   },
+   "kafkaconfigevents": {
+      "bootstrapServers": "iib-kbr-01.cs.boeing.com:9093, iib-kbr-02.cs.boeing.com:9093, iib-kbr-03.cs.boeing.com:9093, iib-kbr-04.cs.boeing.com:9093, iib-kbr-05.cs.boeing.com:9093",
+      "keyStoreLocation": "I2L_JAVA.pem",
+      "keyStorePassword": "",
+      "keyPassword": "I2LPass@2021",
+      "topic": "EW.IIOT.I2L.DEVTAGREADEVENTS-CHARLESTON.1.LOCAL.AVRO"
+   },
+   "eventqueryconfig": {
+      "deviceDbConnectionString": "Server=SQL-D-16T1067.NOS.BOEING.COM;Database=I2LCharlestonDevices;User Id=uc9367bfcece547978b9d705fb15fe075;Password=P54a69bb2acd146d2af5e7a3b21ea0e87;",
+      "eventDbConnectionString": "Server=SQL-D-16T1067.NOS.BOEING.COM;Database=I2LCharlestonEvents;User Id=u97efaf4075e14864bd38ebc3df78beae;Password=P71c96f8945664578a0f4bf8c7fae9e78;"
+   },
+       "historianConfig": [
+        {
+            "userName": "i2l",
+            "password": "locationbasedservice",
+            "url": "https://SBW70009861.nos.boeing.com:5460/connectordata/i2l/"
+        }
+    ],
+    "assetRedisConfig": {
+        "hostName": "q-s0.redis-instance.services.service-instance-c9de762d-d8d9-4f88-8b0f-c3d9869f0b63.bosh",
+        "password": "JRe3O8Kny6aPG2vqnZ2aPcohQILn4L",
+        "port": "6379",
+        "connectionString": ""
+    }
+}

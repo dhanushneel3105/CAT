@@ -1,0 +1,87 @@
+{
+    "name": "Charleston",
+    "center": [
+        32.79192,
+        -79.926
+    ],
+    "zoom": 18,
+    "mapOptions": {
+        "center": [
+            32.79192,
+            -79.926
+        ],
+        "zoom": 18
+    },
+    "buildings": [
+        {
+            "buildingName": "88-15",
+            "floors": [
+                {
+                    "floorId":1,
+                    "shps": [
+                        {
+                            "shpFileURL": "assets/maps/charleston/airfield_polys",
+                            "style": {
+                                "weight": 1,
+                                "color": "#ebeeda",
+                                "opacity": 1,
+                                "fillColor": "#ebeeda",
+                                "fillOpacity": 1
+                            }
+                        },
+                        {
+                            "shpFileURL": "assets/maps/charleston/road",
+                            "style": {
+                                "weight": 0.5,
+                                "color": "#a300a3",
+                                "opacity": 0.5,
+                                "fillColor": "#a300a3",
+                                "fillOpacity": 0.5
+                            }
+                        },
+                        {
+                            "shpFileURL": "assets/maps/charleston/structures",
+                            "style": {
+                                "weight": 0.5,
+                                "color": "#65a800",
+                                "opacity": 0.5,
+                                "fillColor": "#65a800",
+                                "fillOpacity": 0.5
+                            }
+                        },
+                        {
+                            "shpFileURL": "assets/maps/charleston/vegetation",
+                            "style": {
+                                "weight": 1,
+                                "color": "#99a8a3",
+                                "opacity": 1,
+                                "fillColor": "#b7c9c3",
+                                "fillOpacity": 1
+                            }
+                        },
+                        {
+                            "shpFileURL": "assets/maps/charleston/walking_polys",
+                            "style": {
+                                "weight": 1,
+                                "color": "#363434",
+                                "opacity": 1,
+                                "fillColor": "#363434",
+                                "fillOpacity": 1
+                            }
+                        },
+                        {
+                            "shpFileURL": "assets/maps/charleston/water",
+                            "style": {
+                                "weight": 1,
+                                "color": "#808080",
+                                "opacity": 1,
+                                "fillColor": "#b8b8b8",
+                                "fillOpacity": 1
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,962 @@
+{
+	"info": {
+		"_postman_id": "d5ca3db8-834c-44de-a04e-d9f4f54e9441",
+		"name": "IIOT_Local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Location lookup",
+			"item": [
+				{
+					"name": "Fetch all locations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/location/fetchAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"location",
+								"fetchAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch one location",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/location/fetchById/8a7fb0b27587fc6e017596a7f9fe0009",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"location",
+								"fetchById",
+								"8a7fb0b27587fc6e017596a7f9fe0009"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add location",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"site\": \"Winnipeg\",\r\n    \"building\": \"Toronto\",\r\n    \"floor\": 10,\r\n    \"name\": \"factory\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/location/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"location",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update location",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"8aa5b130795fdf9e01795fe04da50000\",\r\n    \"site\": \"Winnipeg\",\r\n    \"building\": \"Ottawa\",\r\n    \"floor\": \"2\",\r\n    \"name\": \"factory\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/location/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"location",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete location",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/location/remove/8aa5b1957946fb28017946fc84290000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"location",
+								"remove",
+								"8aa5b1957946fb28017946fc84290000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch all zonePolygons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/zonePolygons/FetchAllDefaultZones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"zonePolygons",
+								"FetchAllDefaultZones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch zones by user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/zonePolygons/fetchZonesByUser/3244410",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"zonePolygons",
+								"fetchZonesByUser",
+								"3244410"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add zonePolygon",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"locationId\": \"8aa5f52576196d980176197b20740000\",\r\n    \"zoneName\": \"99-F59 Chemical Storage Goods Out\",\r\n    \"attributes\": \"not Default\",\r\n    \"polygonArray\": \"[\\n  [\\n    53.39359281639879,\\n    -1.3786004923187847\\n  ],\\n  [\\n    53.39359984785119,\\n    -1.3785860122436855\\n  ],\\n  [\\n    53.393587063395834,\\n    -1.3785656330363443\\n  ],\\n  [\\n    53.39358003194131,\\n    -1.3785854759143046\\n  ]\\n]\",\r\n    \"isActive\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/zonePolygons/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"zonePolygons",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit polygon",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"8aa5b19579562b940179566aff4a0000\",\r\n    \"locationId\": \"8aa5f52576196d980176197b20740000\",\r\n    \"zoneName\": \"99-F59 QA Storage Internal\",\r\n    \"attributes\": \"not Default\",\r\n    \"polygonArray\": \"[\\n  [\\n    53.39359281639879,\\n    -1.3786004923187847\\n  ],\\n  [\\n    53.39359984785119,\\n    -1.3785860122436855\\n  ],\\n  [\\n    53.393587063395834,\\n    -1.3785656330363443\\n  ],\\n  [\\n    53.39358003194131,\\n    -1.3785854759143046\\n  ]\\n]\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/zonePolygons/editZone",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"zonePolygons",
+								"editZone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete zone",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/zonePolygons/deleteZone/8aa5b19579562b940179566aff4a0000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"zonePolygons",
+								"deleteZone",
+								"8aa5b19579562b940179566aff4a0000"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "oauth2",
+				"oauth2": [
+					{
+						"key": "tokenName",
+						"value": "location-lookup",
+						"type": "string"
+					},
+					{
+						"key": "redirect_uri",
+						"value": "https://location-lookup.apps.pcfpre-ewd.cloud.boeing.com",
+						"type": "string"
+					},
+					{
+						"key": "clientSecret",
+						"value": "70818673-4201-4287-80a6-ceaf4a542708",
+						"type": "string"
+					},
+					{
+						"key": "clientId",
+						"value": "63f32f2d-6d3f-4606-a8d8-36166d4752b6",
+						"type": "string"
+					},
+					{
+						"key": "authUrl",
+						"value": "https://apps-bemsid-only.login.system.pcfpre-ewd.cloud.boeing.com/oauth/authorize",
+						"type": "string"
+					},
+					{
+						"key": "useBrowser",
+						"value": false,
+						"type": "boolean"
+					},
+					{
+						"key": "scope",
+						"value": "openid",
+						"type": "string"
+					},
+					{
+						"key": "accessTokenUrl",
+						"value": "https://apps-bemsid-only.login.system.pcfpre-ewd.cloud.boeing.com/oauth/token",
+						"type": "string"
+					},
+					{
+						"key": "grant_type",
+						"value": "authorization_code",
+						"type": "string"
+					},
+					{
+						"key": "client_authentication",
+						"value": "header",
+						"type": "string"
+					},
+					{
+						"key": "tokenType",
+						"value": "bearer",
+						"type": "string"
+					},
+					{
+						"key": "addTokenTo",
+						"value": "header",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "User Role",
+			"item": [
+				{
+					"name": "Fetch all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch single user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/user/profile/3098639",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"user",
+								"profile",
+								"3098639"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Dallas Scholes\",\r\n    \"emailId\": \"dallas.s.scholes@boeing.com\",\r\n    \"bemsId\": \"406186\",\r\n    \"location\": {\r\n        \"id\": \"8a7fb0b27587fc6e017596a5a6a90007\",\r\n        \"site\": \"Bangalore\",\r\n        \"building\": \"Tower I\",\r\n        \"floor\": \"10\",\r\n        \"name\": \"DeviceTest\"\r\n    },\r\n    \"roles\": [\r\n        {\r\n            \"id\": \"4\",\r\n            \"location\": null,\r\n            \"name\": \"\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Sachin Shetty\",\r\n    \"emailId\": \"sachin.r.shetty@boeing.com\",\r\n    \"bemsId\": \"3048919\",\r\n    \"isActive\": true,\r\n    \"location\": {\r\n        \"id\": \"8a7fb0b27587fc6e017596a5a6a90007\",\r\n        \"site\": \"Bangalore\",\r\n        \"building\": \"Tower I\",\r\n        \"floor\": \"10\",\r\n        \"name\": \"DeviceTest\"\r\n    },\r\n    \"roles\": [\r\n        {\r\n            \"id\": \"4\",\r\n            \"name\": \"ADMIN\",\r\n            \"location\": null\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/user/delete/406186",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"user",
+								"delete",
+								"406186"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch all roles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/role/fetchAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"role",
+								"fetchAll"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "oauth2",
+				"oauth2": [
+					{
+						"key": "redirect_uri",
+						"value": "https://lbsdeviceservice.apps.pcfpre-ewd.cloud.boeing.com",
+						"type": "string"
+					},
+					{
+						"key": "authUrl",
+						"value": "https://apps-bemsid-only.login.system.pcfpre-ewd.cloud.boeing.com/oauth/authorize",
+						"type": "string"
+					},
+					{
+						"key": "scope",
+						"value": "openid",
+						"type": "string"
+					},
+					{
+						"key": "clientSecret",
+						"value": "44f46a56-d048-4e4f-aab0-b273541f5f7b",
+						"type": "string"
+					},
+					{
+						"key": "clientId",
+						"value": "e9ffa7ae-ad9b-45f7-98fb-cd7cd24db676",
+						"type": "string"
+					},
+					{
+						"key": "accessTokenUrl",
+						"value": "https://apps-bemsid-only.login.system.pcfpre-ewd.cloud.boeing.com/oauth/token",
+						"type": "string"
+					},
+					{
+						"key": "grant_type",
+						"value": "authorization_code",
+						"type": "string"
+					},
+					{
+						"key": "tokenName",
+						"value": "user-role",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Device Services",
+			"item": [
+				{
+					"name": "Get all devices",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ADD Test\",\r\n    \"hostName\": \"boeing.com\",\r\n    \"serialNumber\": \"123456789\",\r\n    \"modelNumber\": \"100\",\r\n    \"active\": true,\r\n    \"registrationDate\": 1597500800,\r\n    \"status\": false,\r\n    \"readerMode\": \"AutoSetDenseReader\",\r\n    \"searchMode\": \"TagFocus\",\r\n    \"sessionMode\": \"1\",\r\n    \"filterType\": \"\",\r\n    \"operation\": \"\",\r\n    \"id\": \"\",\r\n    \"channel\": \"\",\r\n    \"IMEI\": \"\",\r\n    \"firmwareVersion\": \"\",\r\n    \"lat\": \"\",\r\n    \"lng\": \"\",\r\n    \"elev\": \"\",\r\n    \"location\": {\r\n        \"id\": \"8aa5f52576196d980176197b20740000\",\r\n        \"site\": \"Everrett\",\r\n        \"building\": \"EV\",\r\n        \"floor\": \"10\",\r\n        \"name\": \"Assemble Area\"\r\n    },\r\n    \"antennaConfiguration\": [\r\n        {\r\n            \"port\": 1,\r\n            \"rxSensitivityDbm\": -70,\r\n            \"transmitPowerInDbm\": 27,\r\n            \"active\": true,\r\n            \"location\": {\r\n                \"id\": \"8aa5f52576196d980176197b20740000\",\r\n                \"building\": \"\",\r\n                \"floor\": \"\",\r\n                \"name\": \"\",\r\n                \"site\": \"\"\r\n            }\r\n        },\r\n        {\r\n            \"port\": 2,\r\n            \"rxSensitivityDbm\": -70,\r\n            \"transmitPowerInDbm\": 27,\r\n            \"active\": true,\r\n            \"location\": {\r\n                \"id\": \"8aa5f52576196d980176197b20740000\",\r\n                \"building\": \"\",\r\n                \"floor\": \"\",\r\n                \"name\": \"\",\r\n                \"site\": \"\"\r\n            }\r\n        },\r\n        {\r\n            \"port\": 3,\r\n            \"rxSensitivityDbm\": -70,\r\n            \"transmitPowerInDbm\": 27,\r\n            \"active\": true,\r\n            \"location\": {\r\n                \"id\": \"8aa5f52576196d980176197b20740000\",\r\n                \"building\": \"\",\r\n                \"floor\": \"\",\r\n                \"name\": \"\",\r\n                \"site\": \"\"\r\n            }\r\n        },\r\n        {\r\n            \"port\": 4,\r\n            \"rxSensitivityDbm\": -70,\r\n            \"transmitPowerInDbm\": 27,\r\n            \"active\": true,\r\n            \"location\": {\r\n                \"id\": \"8aa5f52576196d980176197b20740000\",\r\n                \"building\": \"\",\r\n                \"floor\": \"\",\r\n                \"name\": \"\",\r\n                \"site\": \"\"\r\n            }\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "https://lbsdeviceservice-websockets.apps.pcfpre-ewd.cloud.boeing.com/api/device/impinj/fetchAll",
+							"protocol": "https",
+							"host": [
+								"lbsdeviceservice-websockets",
+								"apps",
+								"pcfpre-ewd",
+								"cloud",
+								"boeing",
+								"com"
+							],
+							"path": [
+								"api",
+								"device",
+								"impinj",
+								"fetchAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get single device",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/api/device/impinj/fetch/8a7fe2b576d1ddf50176d63192920017",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"device",
+								"impinj",
+								"fetch",
+								"8a7fe2b576d1ddf50176d63192920017"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Impinj device",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"soft_delete1\",\r\n    \"hostName\": \"soft.delete.boeing.com\",\r\n    \"serialNumber\": \"123456789\",\r\n    \"modelNumber\": \"100\",\r\n    \"active\": true,\r\n    \"registrationDate\": 1597500800,\r\n    \"status\": false,\r\n    \"readerMode\": \"AutoSetDenseReader\",\r\n    \"searchMode\": \"TagFocus\",\r\n    \"sessionMode\": \"1\",\r\n    \"filterType\": \"\",\r\n    \"operation\": \"\",\r\n    \"id\": \"\",\r\n    \"channel\": \"\",\r\n    \"IMEI\": \"\",\r\n    \"firmwareVersion\": \"\",\r\n    \"lat\": \"\",\r\n    \"lng\": \"\",\r\n    \"elev\": \"\",\r\n    \"location\": {\r\n        \"id\": \"8aa5f52576196d980176197b20740000\",\r\n        \"site\": \"Everrett\",\r\n        \"building\": \"EV\",\r\n        \"floor\": \"10\",\r\n        \"name\": \"Assemble Area\"\r\n    },\r\n    \"antennaConfiguration\": [\r\n        {\r\n            \"port\": 1,\r\n            \"rxSensitivityDbm\": -70,\r\n            \"transmitPowerInDbm\": 27,\r\n            \"active\": true,\r\n            \"location\": {\r\n                \"id\": \"8aa5f52576196d980176197b20740000\",\r\n                \"building\": \"\",\r\n                \"floor\": \"\",\r\n                \"name\": \"\",\r\n                \"site\": \"\"\r\n            }\r\n        },\r\n        {\r\n            \"port\": 2,\r\n            \"rxSensitivityDbm\": -70,\r\n            \"transmitPowerInDbm\": 27,\r\n            \"active\": true,\r\n            \"location\": {\r\n                \"id\": \"8aa5f52576196d980176197b20740000\",\r\n                \"building\": \"\",\r\n                \"floor\": \"\",\r\n                \"name\": \"\",\r\n                \"site\": \"\"\r\n            }\r\n        },\r\n        {\r\n            \"port\": 3,\r\n            \"rxSensitivityDbm\": -70,\r\n            \"transmitPowerInDbm\": 27,\r\n            \"active\": true,\r\n            \"location\": {\r\n                \"id\": \"8aa5f52576196d980176197b20740000\",\r\n                \"building\": \"\",\r\n                \"floor\": \"\",\r\n                \"name\": \"\",\r\n                \"site\": \"\"\r\n            }\r\n        },\r\n        {\r\n            \"port\": 4,\r\n            \"rxSensitivityDbm\": -70,\r\n            \"transmitPowerInDbm\": 27,\r\n            \"active\": true,\r\n            \"location\": {\r\n                \"id\": \"8aa5f52576196d980176197b20740000\",\r\n                \"building\": \"\",\r\n                \"floor\": \"\",\r\n                \"name\": \"\",\r\n                \"site\": \"\"\r\n            }\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/device/impinj/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"device",
+								"impinj",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Impinj device",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"UPDATE Test\",\r\n    \"hostName\": \"boeing.com\",\r\n    \"serialNumber\": \"123456789\",\r\n    \"modelNumber\": \"100\",\r\n    \"active\": true,\r\n    \"registrationDate\": 1597500800,\r\n    \"status\": false,\r\n    \"readerMode\": \"AutoSetDenseReader\",\r\n    \"searchMode\": \"TagFocus\",\r\n    \"sessionMode\": \"1\",\r\n    \"filterType\": \"\",\r\n    \"operation\": \"\",\r\n    \"id\": \"8aa432eb7689517c0176895930070001\",\r\n    \"channel\": \"\",\r\n    \"IMEI\": \"\",\r\n    \"firmwareVersion\": \"\",\r\n    \"lat\": \"\",\r\n    \"lng\": \"\",\r\n    \"elev\": \"\",\r\n    \"location\": {\r\n        \"id\": \"8aa5f52576196d980176197b20740000\",\r\n        \"site\": \"Everrett\",\r\n        \"building\": \"EV\",\r\n        \"floor\": \"10\",\r\n        \"name\": \"Assemble Area\"\r\n    },\r\n    \"antennaConfiguration\": [\r\n        {\r\n            \"port\": 1,\r\n            \"rxSensitivityDbm\": -70,\r\n            \"transmitPowerInDbm\": 27,\r\n            \"active\": true,\r\n            \"location\": {\r\n                \"id\": \"8aa5f52576196d980176197b20740000\",\r\n                \"building\": \"\",\r\n                \"floor\": \"\",\r\n                \"name\": \"\",\r\n                \"site\": \"\"\r\n            }\r\n        },\r\n        {\r\n            \"port\": 2,\r\n            \"rxSensitivityDbm\": -70,\r\n            \"transmitPowerInDbm\": 27,\r\n            \"active\": true,\r\n            \"location\": {\r\n                \"id\": \"8aa5f52576196d980176197b20740000\",\r\n                \"building\": \"\",\r\n                \"floor\": \"\",\r\n                \"name\": \"\",\r\n                \"site\": \"\"\r\n            }\r\n        },\r\n        {\r\n            \"port\": 3,\r\n            \"rxSensitivityDbm\": -70,\r\n            \"transmitPowerInDbm\": 27,\r\n            \"active\": true,\r\n            \"location\": {\r\n                \"id\": \"8aa5f52576196d980176197b20740000\",\r\n                \"building\": \"\",\r\n                \"floor\": \"\",\r\n                \"name\": \"\",\r\n                \"site\": \"\"\r\n            }\r\n        },\r\n        {\r\n            \"port\": 4,\r\n            \"rxSensitivityDbm\": -70,\r\n            \"transmitPowerInDbm\": 27,\r\n            \"active\": true,\r\n            \"location\": {\r\n                \"id\": \"8aa5f52576196d980176197b20740000\",\r\n                \"building\": \"\",\r\n                \"floor\": \"\",\r\n                \"name\": \"\",\r\n                \"site\": \"\"\r\n            }\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/device/impinj/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"device",
+								"impinj",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Impinj device antenna",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"deviceId\": \"8aa432eb7689517c0176895930070001\",\r\n    \"impinjAntennaList\": [\r\n        {\r\n            \"port\": 1,\r\n            \"rxSensitivityDbm\": -70,\r\n            \"transmitPowerInDbm\": 10,\r\n            \"location\": {\r\n                \"id\": \"8aa5f52576196d980176197b20740000\",\r\n                \"site\": \"Everrett\",\r\n                \"building\": \"EV\",\r\n                \"floor\": \"10\",\r\n                \"name\": \"Assemble Area\"\r\n            },\r\n            \"active\": true\r\n        },\r\n        {\r\n            \"port\": 2,\r\n            \"rxSensitivityDbm\": -70,\r\n            \"transmitPowerInDbm\": 10,\r\n            \"location\": {\r\n                \"id\": \"8aa5f52576196d980176197b20740000\",\r\n                \"site\": \"Everrett\",\r\n                \"building\": \"EV\",\r\n                \"floor\": \"10\",\r\n                \"name\": \"Assemble Area\"\r\n            },\r\n            \"active\": true\r\n        },\r\n        {\r\n            \"port\": 3,\r\n            \"rxSensitivityDbm\": -70,\r\n            \"transmitPowerInDbm\": 10,\r\n            \"location\": {\r\n                \"id\": \"8aa5f52576196d980176197b20740000\",\r\n                \"site\": \"Everrett\",\r\n                \"building\": \"EV\",\r\n                \"floor\": \"10\",\r\n                \"name\": \"Assemble Area\"\r\n            },\r\n            \"active\": true\r\n        },\r\n        {\r\n            \"port\": 4,\r\n            \"rxSensitivityDbm\": -70,\r\n            \"transmitPowerInDbm\": 10,\r\n            \"location\": {\r\n                \"id\": \"8aa5f52576196d980176197b20740000\",\r\n                \"site\": \"Everrett\",\r\n                \"building\": \"EV\",\r\n                \"floor\": \"10\",\r\n                \"name\": \"Assemble Area\"\r\n            },\r\n            \"active\": true\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/device/impinj/update/antennaConfiguration",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"device",
+								"impinj",
+								"update",
+								"antennaConfiguration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete device",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"deviceId\": \"8aa432eb7689517c0176895930070001\",\r\n    \"impinjAntennaList\": [\r\n        {\r\n            \"port\": 1,\r\n            \"rxSensitivityDbm\": -70,\r\n            \"transmitPowerInDbm\": 10,\r\n            \"location\": {\r\n                \"id\": \"8aa5f52576196d980176197b20740000\",\r\n                \"site\": \"Everrett\",\r\n                \"building\": \"EV\",\r\n                \"floor\": \"10\",\r\n                \"name\": \"Assemble Area\"\r\n            },\r\n            \"active\": true\r\n        },\r\n        {\r\n            \"port\": 2,\r\n            \"rxSensitivityDbm\": -70,\r\n            \"transmitPowerInDbm\": 10,\r\n            \"location\": {\r\n                \"id\": \"8aa5f52576196d980176197b20740000\",\r\n                \"site\": \"Everrett\",\r\n                \"building\": \"EV\",\r\n                \"floor\": \"10\",\r\n                \"name\": \"Assemble Area\"\r\n            },\r\n            \"active\": true\r\n        },\r\n        {\r\n            \"port\": 3,\r\n            \"rxSensitivityDbm\": -70,\r\n            \"transmitPowerInDbm\": 10,\r\n            \"location\": {\r\n                \"id\": \"8aa5f52576196d980176197b20740000\",\r\n                \"site\": \"Everrett\",\r\n                \"building\": \"EV\",\r\n                \"floor\": \"10\",\r\n                \"name\": \"Assemble Area\"\r\n            },\r\n            \"active\": true\r\n        },\r\n        {\r\n            \"port\": 4,\r\n            \"rxSensitivityDbm\": -70,\r\n            \"transmitPowerInDbm\": 10,\r\n            \"location\": {\r\n                \"id\": \"8aa5f52576196d980176197b20740000\",\r\n                \"site\": \"Everrett\",\r\n                \"building\": \"EV\",\r\n                \"floor\": \"10\",\r\n                \"name\": \"Assemble Area\"\r\n            },\r\n            \"active\": true\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/device/impinj/delete/8a7fe2b576d1ddf50176d63192920017",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"device",
+								"impinj",
+								"delete",
+								"8a7fe2b576d1ddf50176d63192920017"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "oauth2",
+				"oauth2": [
+					{
+						"key": "redirect_uri",
+						"value": "https://lbsdeviceservice.apps.pcfpre-ewd.cloud.boeing.com",
+						"type": "string"
+					},
+					{
+						"key": "clientSecret",
+						"value": "44f46a56-d048-4e4f-aab0-b273541f5f7b",
+						"type": "string"
+					},
+					{
+						"key": "clientId",
+						"value": "e9ffa7ae-ad9b-45f7-98fb-cd7cd24db676",
+						"type": "string"
+					},
+					{
+						"key": "tokenName",
+						"value": "device-services",
+						"type": "string"
+					},
+					{
+						"key": "authUrl",
+						"value": "https://apps-bemsid-only.login.system.pcfpre-ewd.cloud.boeing.com/oauth/authorize",
+						"type": "string"
+					},
+					{
+						"key": "useBrowser",
+						"value": false,
+						"type": "boolean"
+					},
+					{
+						"key": "scope",
+						"value": "openid",
+						"type": "string"
+					},
+					{
+						"key": "accessTokenUrl",
+						"value": "https://apps-bemsid-only.login.system.pcfpre-ewd.cloud.boeing.com/oauth/token",
+						"type": "string"
+					},
+					{
+						"key": "grant_type",
+						"value": "authorization_code",
+						"type": "string"
+					},
+					{
+						"key": "client_authentication",
+						"value": "header",
+						"type": "string"
+					},
+					{
+						"key": "tokenType",
+						"value": "bearer",
+						"type": "string"
+					},
+					{
+						"key": "addTokenTo",
+						"value": "header",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Realtime service",
+			"item": [
+				{
+					"name": "Track",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    \"ABC XYZ\",\r\n    \"123 456\"\r\n]"
+						},
+						"url": {
+							"raw": "http://localhost:8083/api/track/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"track",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "oauth2",
+				"oauth2": [
+					{
+						"key": "redirect_uri",
+						"value": "https://lbsdeviceservice.apps.pcfpre-ewd.cloud.boeing.com",
+						"type": "string"
+					},
+					{
+						"key": "clientSecret",
+						"value": "44f46a56-d048-4e4f-aab0-b273541f5f7b",
+						"type": "string"
+					},
+					{
+						"key": "clientId",
+						"value": "e9ffa7ae-ad9b-45f7-98fb-cd7cd24db676",
+						"type": "string"
+					},
+					{
+						"key": "tokenName",
+						"value": "device-services",
+						"type": "string"
+					},
+					{
+						"key": "authUrl",
+						"value": "https://apps-bemsid-only.login.system.pcfpre-ewd.cloud.boeing.com/oauth/authorize",
+						"type": "string"
+					},
+					{
+						"key": "useBrowser",
+						"value": false,
+						"type": "boolean"
+					},
+					{
+						"key": "scope",
+						"value": "openid",
+						"type": "string"
+					},
+					{
+						"key": "accessTokenUrl",
+						"value": "https://apps-bemsid-only.login.system.pcfpre-ewd.cloud.boeing.com/oauth/token",
+						"type": "string"
+					},
+					{
+						"key": "grant_type",
+						"value": "authorization_code",
+						"type": "string"
+					},
+					{
+						"key": "client_authentication",
+						"value": "header",
+						"type": "string"
+					},
+					{
+						"key": "tokenType",
+						"value": "bearer",
+						"type": "string"
+					},
+					{
+						"key": "addTokenTo",
+						"value": "header",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "deviceServiceAccessToken",
+			"value": ""
+		},
+		{
+			"key": "deviceServiceTokenExpiry",
+			"value": ""
+		}
+	]
+}

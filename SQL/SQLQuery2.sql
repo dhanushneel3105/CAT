@@ -1,0 +1,1 @@
+select(cast(datediff(s,'1970-01-01',getutcdate())as bigint)*1000)
